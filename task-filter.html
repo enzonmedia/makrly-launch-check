@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Task filter — launch verification demo</title>
+<h1>Task filter demo</h1>
+<p>Disposable Makrly launch verification feature.</p>
+<label><input id="hide-completed" type="checkbox"> Hide completed tasks</label>
+<ul><li>Review your next release</li><li data-completed>Completed: connect the repository</li></ul>
+<script>
+document.getElementById("hide-completed").addEventListener("change", event => {
+ document.querySelectorAll("[data-completed]").forEach(task => { task.hidden = event.target.checked; });
+});
+</script>
+</html>
